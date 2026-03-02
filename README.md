@@ -40,6 +40,25 @@ Luego define la región con formato `x,y,ancho,alto`.
 python fish_auto.py --region 850,520,220,120 --tecla e --umbral 22 --cooldown 0.9
 ```
 
+### Crear ejecutable .exe (Windows)
+
+Si quieres probar el bot sin abrir Python manualmente, puedes generar un `.exe`:
+
+```bat
+build_fish_auto_exe.bat
+```
+
+Esto crea:
+
+- `dist\fish_auto.exe`
+
+También puedes hacerlo a mano:
+
+```bat
+py -m pip install -r requirements-fish-auto.txt
+py -m PyInstaller --onefile --name fish_auto fish_auto.py
+```
+
 Parámetros principales:
 
 - `--region`: región donde mirar el indicador.
